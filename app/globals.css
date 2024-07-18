@@ -17,15 +17,83 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #ffffff;
+  background: url("http://getwallpapers.com/wallpaper/full/9/9/b/1118561-gorgerous-future-city-wallpaper-1920x1080-hd-for-mobile.jpg");
+  font-family: 'Arial', sans-serif;
 }
+
+.container.movie-card {
+  background-color: rgb(151, 72, 88);
+  }
+
+.font-container{
+  background-color: rgb(151, 72, 88);
+    width: 100%;
+    height: 12,5vh;
+    border-radius: 50px;
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+}
+
+
+.movie-card {
+  background-color: rgba(0, 0, 0, 0.6); 
+  border: none;
+  border-radius: 10px; /* Sudut melengkung */
+  overflow: hidden; /* Untuk menghindari konten meluap */
+  color: white; /* Warna teks putih */
+  padding: 15px;
+  margin: 10px;
+  width: 200px; /* Sesuaikan lebar sesuai kebutuhan */
+  position: relative; /* Untuk posisikan elemen secara absolut di dalam kartu */
+}
+
+.bg-body-tertiary {
+  background-color: #808080;
+}
+
+.bg-info{
+  border-color: none;
+}
+
+
+
+.movie-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+}
+
+.movie-rating span {
+  margin-right: 5px;
+}
+
+.movie-rating .star {
+  color: gold;
+}
+
+.watch-now-button {
+  background-color: #ff0055; 
+  color: white; /* Warna teks putih */
+  border: none; /* Menghilangkan border default */
+  border-radius: 20px; /* Sudut melengkung */
+  padding: 10px 20px;
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  margin: 10px auto 0;
+  cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+
+    
 
 @layer utilities {
   .text-balance {

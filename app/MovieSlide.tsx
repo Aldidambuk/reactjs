@@ -4,8 +4,20 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 
+// Menambahkan interface untuk tipe data Movie
+interface Movie {
+    judul: string; // Properti judul bertipe string
+    sutradara: string; // Properti sutradara bertipe string
+    foto: string;
+  }
+  
+  // Menambahkan interface untuk tipe data respons dari API
+  interface MovieData {
+    data: Movie[]; // Properti data bertipe array dari objek Movie
+  }
+
 const MovieSlide = () => {
-    const [movieData, setMovieData] = useState(null);
+    const [movieData, setMovieData] = useState<MovieData | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,7 +35,7 @@ const MovieSlide = () => {
 
     return (
         <Carousel>
-            {movieData?.data.map((movie: movie, index: number)=>(
+            {movieData?.data.map((movie: Movie, index: number)=>(
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
